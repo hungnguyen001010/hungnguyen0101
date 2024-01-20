@@ -1,0 +1,21 @@
+
+.nhapcon {
+    margin-bottom: 20px;
+}
+.a, .s, .m, .d {
+    color: orange;
+}
+
+.result {
+    font-weight: normal;
+    color: orange;
+}
+.container {
+    max-width: 500px;
+    margin-left: 70px;
+}
+.hienthi {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
