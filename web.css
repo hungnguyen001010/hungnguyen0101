@@ -1,90 +1,149 @@
-body {
-    /* background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
-    overflow: auto;
-    font-family: Arial, sans-serif;
+*{
     margin: 0;
     padding: 0;
-    font-weight: 400;
-    font-family: "Google Sans",sans-serif;
-    background-image: url(anhbackground3.jpg);
+    box-sizing: border-box;
 }
-.caption{
-    line-height: 32px;
+header{
+    display: flex;
+    background-color:#1F242D ;
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    font-family: 'popins';
+    /* background-image: url(anh2.jpg) ;
+    background:cover;
+    background-repeat:no-repeat ; */
 }
+.Menu{
+    text-align: right;
+    padding-right: 60px;
+    font-size: 23px;
+    justify-content: space-between;
+    padding-top: 10px;
+    background-color: #1F242D;
+    color: #F4FAFF;
+}
+
+#menu-list {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #menu-list {
+        display: none;
+    }
+    #menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-list.active {
+        display: block;
+    }
+}
+
+
+.active{
+    word-spacing: 100px;
+    text-decoration: none;
+}
+.noidung{
+    position: relative;
+    display: flex;
+}
+.noidung img{
+    width: 100%;
+}
+.noidung1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.gioithieu {
+    display: flex;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #A3ACBD;
+    line-height: 1.5;
+}
+
+.gioithieu1 {
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+
+.loichao {
+    padding: 20px;
+    margin: 10px 0;
+    border: 5px solid blanchedalmond;
+    border-radius: 25px;
+}
+
+
+.sothich {
+    background-color: #A3ACBD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+
+.dabong, .game, .nghenhac {
+    width: 80%;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .gioithieu{
+        display: flex;
+        flex-direction: column;
+    }
+    .gioithieu1 {
+        width: 100%;
+    }
+
+    .loichao {
+        width: 100%;
+    }
+
+    .sothich {
+        display: block;
+        text-align: center;
+    }
+
+    .dabong, .game, .nghenhac {
+        width: 100%;
+        text-align: center;
+    }
+     .noidung1{
+        font-size: 18px;
+    } 
+    .my-service-container h3{
+        font-size: 17px;
+    }
+}
+
+
+
 .caption1{
     color: rgb(0,255,255);
 }
-.header {
-    background-color: rgb(31, 132, 145);
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-family:'popins';
-    font-size: 30px;
-    justify-content: space-between;
-    letter-spacing: 3px;
-}
-section {
-    border-radius: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #98d4db;
-    padding: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-@media (max-width: 500px) {
-.section {
-   max-width:400px;
-   margin:20px auto;
-    }
-}
-.gioithieu{
-    border-radius: 5px dashed white;
-}
-.col5{
-    border-radius: 10px;
-    width: 400px;
-    height:250px;
-    overflow: hidden;
-   
-}
-.col5 img {
-    width: 100%;
-    height: 150%;
-    object-fit: cover; 
-  }
-.col6{
-    width: 400px;
-    height:250px;
-    overflow: hidden;
-   
-}
-.col6 h2{
-    font-size:45px;
-    line-height: 0.4px;
-}
-.col6 p{
-    font-size:15px;
-}
-.col6 p{
-    text-align: center;
-    padding: 40px;
-}
-@media (max-width: 1100px) {
-.col6 h2 {
-   font-size: 15px !important;  
-    }
-.col6 p {
-    font-size:10px;
-}
-}
-.bod {
-    display: flex;
-    justify-content: space-between;
- }
 .containey {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -92,6 +151,7 @@ section {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
+    height: 720px;
 }
 @media (max-width: 820px) {
 .containey {
@@ -100,7 +160,6 @@ section {
     float: none; 
     }
 }
-  
 .item {
     position: relative;
     overflow: hidden;
@@ -156,24 +215,161 @@ a:active {
 .a:visited {
     color: purple; 
   }
-/* footer{
-    text-align: left;
-    color: #ffffff;
-    background-color:#000000;
-    font-family: "Times New Roman", serif;
-    padding: 13px
+.contact{
+    display: block;
+    background-color: white;
+    padding: auto;
+    width: 100%;
+    height: 380px;
 }
-.footer {
+.CONTACT{
+    text-align: center;
+    letter-spacing: 5px;
+    color: pink;
+}
+.info {
+    display: flex;
+}
+.card {
+    background-color: black;
+    width: 70%;
+    padding: 30px 30px;
+    border: 6px solid ;
+    box-shadow: 5px 5px 0 ;
+    border-radius: 50px;
+    position: relative;
+  }
+  .card .row {
+    display: grid;
+    grid: auto / auto auto;
+  }
+  
+  .card .row .col {
+    position: relative;
+    width: 100%;
+    margin: 20px 10px;
+    transition: 0.5s;
+  }
+  
+  .card .row .form-group {
+    position: relative;
+    width: 100%;
+    height: 40px;
     color: #ffffff;
-    text-align: right;
+  }
+  
+  .card .row .form-group input,
+  .card .row .form-group textarea {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    font-size: 24px;
+    padding: 10px 0 10px 20px;
+    border: 5px solid ;
+    box-shadow: 10px 10px 0 ;
+    color: #ffffff;
+    border-radius: 50px;
+  }
+  
+  .card .row .form-group label {
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 0 30px;
+    display: block;
+    pointer-events: none;
+  }
+  
+  .row .col:nth-child(6) {
+    margin-top: 64px;
+  }
+  
+  .card .row .form-group input:focus,
+  .card .row .form-group textarea:focus {
+    border: 5px solid #ffffff;
+    transition: all 0.5s;
+  }
+  
+  .card .row input[type="submit"] {
+    border: 5px solid ;
+    box-shadow: 10px 10px 0 ;
     padding: 10px;
- }
- .footer a{
-    color:rgb(2, 117, 79); 
-     opacity: 1;
-     text-decoration: none;
-     font-size: 15px;
- }
- .footer a:hover{
-    color:rgb(240, 223, 130);
- } */
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 45px;
+    transition: all 0.4s;
+  }
+  
+  .card .row input[type="submit"]:hover {
+    border: 5px solid rgba(255, 255, 255, 1);
+    color: #ffffff;
+    transition: all 0.4s;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .card .row {
+      grid-template-columns: repeat(auto-fit,minmax(65%, 1fr));
+    }
+    
+    .card {
+      padding: 20px;
+    }
+    
+    .card h2 {
+      font-size: 34px;
+    }
+    
+    .card .row input[type="submit"] {
+      width: 100%;
+    }
+  }
+.lienhe{
+    background-color: white;
+    width: 50%;
+    float: left;
+    text-align: center;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding-top: 30px;
+    line-height: 2.5;
+}
+.icon{
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+    height: 100px;
+    letter-spacing: 25px;
+    padding-top: 20px;
+}
+.my-service-container {
+    height: 650px;
+    background-color: #A3ACBD;
+    margin-top: 30px;
+}
+.my-service-contain {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+.my-service-item {
+    background-color: whitesmoke;
+    box-shadow: 0 0 48px ;
+    border-radius: 8px;
+    width: 24%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+
