@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <script src="https://kit.fontawesome.com/7dc508f75f.js" crossorigin="anonymous"></script>
-    <script type="text/javascipt" src="webcanhan.js"></script>
+    <script type="text/javascript" src="webcanhan.js"></script>
     <title>Document</title>
 </head>
 <body >
@@ -209,42 +209,42 @@
             <div class="row">
               <div class="col">
                 <div class="form-group">
-                  <label >First Name</label>
-                  <input type="text">
+                  <label for="firstname" >First Name</label>
+                  <input type="text" id="firstname" name="firstname" required>
+                </div> 
+              </div>
+          
+              <div class="col">
+                <div class="form-group">
+                  <label for="surname">Surname</label>
+                  <input type="text" id="surname" name="surname" required>
                 </div>
               </div>
           
               <div class="col">
                 <div class="form-group">
-                  <label>Surname</label>
-                  <input type="text">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
                 </div>
               </div>
           
               <div class="col">
                 <div class="form-group">
-                  <label>Email</label>
-                  <input type="text">
+                  <label for="sdt" >Phone</label>
+                  <input type="number" id="sdt" name="sdt" required>
                 </div>
               </div>
           
               <div class="col">
                 <div class="form-group">
-                  <label>Phone</label>
-                  <input type="text">
+                  <label for="message" >Message</label>
+                  <textarea id="message" name="message" required></textarea>
                 </div>
               </div>
           
               <div class="col">
-                <div class="form-group">
-                  <label>Message</label>
-                  <textarea></textarea>
-                </div>
-              </div>
-          
-              <div class="col">
-                <input type="submit" value="Submit">
-              </div>
+                <input type="submit" id="btndangnhap" name="btndangnhap" value="Submit">
+              </div> 
             </div>
         </div>
     </div>

@@ -1,17 +1,41 @@
 function validateForm(){
-    var ho = document.getElementById('ho').value;
-    var sdt = document.getElementById('sdt').value;
-    var email = document.getElementById('email').value;
-    var tinnhan = document.getElementById('tinnhan').value
-    if(ho === "" || sdt === "" || email === "" || tinnhan === ""){
-        alert("Vui lòng điền đầy đủ thông tin");
-        return false;
-    }
-    if(sdt.length !== 10 || isNaN(sdt)){
-        alert("Số điện thoại không hợp lệ");
-        return false;
-    }
-    return true;
+    const form = document.querySelector('.card');
+    const firstNameInput = document.querySelector('#firstname');
+    const surnameInput = document.querySelector('#surname');
+    const emailInput = document.querySelector('#email');
+    const phoneInput = document.querySelector('#sdt');
+    const messageInput = document.querySelector('#message');
+    const submitButton = document.querySelector('#btndangnhap');
+
+submitButton.addEventListener('click', function(event) {
+  event.preventDefault(); 
+  if (firstNameInput.value.trim() === '') {
+    alert('Please enter your first name');
+    return;
+  }
+  
+  if (surnameInput.value.trim() === '') {
+    alert('Please enter your surname');
+    return;
+  }
+  
+  if (emailInput.value.trim() === '') {
+    alert('Please enter your email');
+    return;
+  }
+  
+  if (phoneInput.value.trim() === '') {
+    alert('Please enter your phone number');
+    return;
+  }
+  
+  if (messageInput.value.trim() === '') {
+    alert('Please enter your message');
+    return;
+  }
+  
+});
+
 }
 
 var menuToggle = document.getElementById('menu-toggle');
@@ -22,4 +46,16 @@ menuToggle.addEventListener('click', function() {
     } else {
         menuList.classList.add('active');
     }
+});
+
+const image1 = document.querySelector('img[src="anh1.jpg"]');
+const image2 = document.querySelector('img[src="anh4.jpg"]');
+
+// Xử lý sự kiện khi người dùng nhấp chuột vào ảnh
+image1.addEventListener('click', function() {
+  image1.src = 'anh4.jpg';
+});
+
+image2.addEventListener('click', function() {
+  image2.src = 'anh1.jpg';
 });
