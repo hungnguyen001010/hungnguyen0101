@@ -1,42 +1,73 @@
-function validateForm(){
-    const form = document.querySelector('.card');
-    const firstNameInput = document.querySelector('#firstname');
-    const surnameInput = document.querySelector('#surname');
-    const emailInput = document.querySelector('#email');
-    const phoneInput = document.querySelector('#sdt');
-    const messageInput = document.querySelector('#message');
-    const submitButton = document.querySelector('#btndangnhap');
-
-submitButton.addEventListener('click', function(event) {
-  event.preventDefault(); 
-  if (firstNameInput.value.trim() === '') {
-    alert('Please enter your first name');
-    return;
+function validateform(e){
+  const form = e.target
+  const firstName = form.querySelector("#ho").value
+  const lastName = form.querySelector("#surname").value
+  const phoneNumb = form.querySelector("#sdt").value
+  const mail = form.querySelector("#email").value
+  const tinnhan = form.querySelector("#message").value
+  if(firstName==""){
+      alert("Ban chua nhap ho");
+      return false;
   }
-  
-  if (surnameInput.value.trim() === '') {
-    alert('Please enter your surname');
-    return;
+  if(lastName==""){
+      alert("Ban chua nhap ten");
+      return false;
   }
-  
-  if (emailInput.value.trim() === '') {
-    alert('Please enter your email');
-    return;
+  if(isNaN(phoneNumb)||length(phoneNumb)==0||length(phoneNumb)>10){
+      alert("Dien thoai phai la so");
+      return false;
   }
-  
-  if (phoneInput.value.trim() === '') {
-    alert('Please enter your phone number');
-    return;
+  if(mail==""){
+    alert("Ban chua nhap email");
+    return false;
   }
-  
-  if (messageInput.value.trim() === '') {
-    alert('Please enter your message');
-    return;
+  if(tinnhan==""){
+    alert("Ban chua nhap tin nhan");
+    return false;
   }
-  
-});
-
+  alert('No fault found')
 }
+const daySelect = document.querySelector("#op_ngay")
+      for (let i = 1; i <= 30; i ++) {
+          const option = document.createElement("option")
+          option.value=i
+          
+          option.innerHTML = i
+          if (i == 1) {
+              option.selected = true
+          }
+          daySelect.appendChild(option)
+      }
+
+      const monthSelect = document.querySelector("#op_thang")
+      for (let i = 1; i <= 12; i ++) {
+          const option = document.createElement("option")
+          option.value=i
+          option.innerHTML = i
+          if (i == 1) {
+              option.selected = true
+          }
+          monthSelect.appendChild(option)
+      }
+
+      const yearSelect = document.querySelector("#op_nam")
+      for (let i = 1980; i <= 2010; i ++) {
+          const option = document.createElement("option")
+          option.value=i
+          option.innerHTML = i
+          if (i == 1) {
+              option.selected = true
+          }
+          yearSelect.appendChild(option)
+      }
+
+      var size="";
+      var sizeAr =document.getElementsByName("rdSize");
+      for(var i=0;i<sizeAr.length;i++){
+          if(sizeAr[i].checked){
+              size=sizeAr[i].value;
+          }
+      }
 
 var menuToggle = document.getElementById('menu-toggle');
 var menuList = document.getElementById('menu-list');
@@ -46,16 +77,4 @@ menuToggle.addEventListener('click', function() {
     } else {
         menuList.classList.add('active');
     }
-});
-
-const image1 = document.querySelector('img[src="anh1.jpg"]');
-const image2 = document.querySelector('img[src="anh4.jpg"]');
-
-// Xử lý sự kiện khi người dùng nhấp chuột vào ảnh
-image1.addEventListener('click', function() {
-  image1.src = 'anh4.jpg';
-});
-
-image2.addEventListener('click', function() {
-  image2.src = 'anh1.jpg';
 });
